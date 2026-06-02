@@ -4,6 +4,7 @@ import { useMediaUrl } from '@rocket.chat/ui-contexts';
 import { useLoadImage } from './hooks/useLoadImage';
 import MessageCollapsible from '../../../MessageCollapsible';
 import AttachmentImage from '../structure/AttachmentImage';
+import AttachmentText from '../structure/AttachmentText';
 
 const ImageAttachment = ({
 	id,
@@ -36,6 +37,10 @@ const ImageAttachment = ({
 					id={id}
 					alt={description}
 				/>
+
+				{ description && (
+					<AttachmentText>{description}</AttachmentText>
+				)}
 			</MessageCollapsible>
 		</>
 	);
